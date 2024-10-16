@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+
+:root{
+   --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+   --fonte2: "Passion One", sans-serif;
+   --fonte3: "Sriracha", cursive;;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    /*text-transform: uppercase; >>> transforma o texto em letras maiúscula*/
+    font-variant: small-caps; /*tranforma as letras em maiúsculas, porém a primeira letra da palavra fica maior*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /* 10% da largura total da tela*/
+    }
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* tira o sublinhado do link*/
+    font-weight: bolder;
+}
+
+a:hover, footer a:hover {
+    text-decoration: underline;/*mostra o sublinhado quando passar o mouse por cima*/
+}
+
+section{ /* serve para todas section, onde manterá uma distancia de 10% do conprimento total vertical*/
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /*espacamento entre as lnhas*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal { /*sintaxe obrigatória*/
+    background-color: white;
+    color: black;
+}
+
+section.imagem { /*sintaxe obrigatória*/
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+section.imagem > p { /* width: 400px; >>criado uma caixa, devido a imagem, porém foi retirado esta tag e substituida por display: inline-block; que se adapta a largura da tela*/
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black; /*sombra interna como se ele tivesse rasgada no papel*/
+}
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center; /* posiciona a imagem a direita e no cent1*/
+   
+}
+
+section#img02{
+    background-image:  url('../imagens/background002.jpg');
+    
+}
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
